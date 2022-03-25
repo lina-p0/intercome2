@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  background: linear-gradient(189.78deg, #FFBA6C -17.15%, #F58100 56.08%, #FE600F 100.99%);
+}
+
+.enter {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+}
+
+.butt {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  font-style: normal;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 350px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 80px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  bottom: 90px;
+}
+
+.butt:hover,
+.butt:focus,
+.butt:active {
+  box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.burger_menu_btn img{
+    position: fixed;
+    top: 10px;
+    left:10px;
+    z-index: 30;
+    width: 70px;
+    height: 70px;
+    /*border-radius: 20%;*/
+    /*background-color: rgb(145, 128, 240);*/
+    cursor: pointer;
+    
+}
+
+.burger_menu_btn:hover /*.burger_lines*/{
+    filter: brightness(0.9);
+}
+
+/*.burger_lines,
+.burger_lines::after,
+.burger_lines::before{
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    background-color: rgb(255, 246, 234);
+}
+
+.burger_lines{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.burger_lines::before{
+    content: '';
+    top: -12px;
+}
+
+.burger_lines::after{
+    content: '';
+    top:12px;
+}*/
+
+.burger_menu_active .burger_menu_btn,
+.burger_menu_active .burger_lines{
+    background-color: transparent;
+}
+
+/*.burger_menu_active .burger_lines{
+    background-color: transparent;
+}
+
+.burger_menu_active .burger_lines::before{
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger_menu_active .burger_lines::after{
+    top: 0;
+    transform: rotate(-45deg);
+}*/
+
+.burger_menu_active .burger_menu_btn{
+    box-shadow: 0 0 0;
+}
+
+.burger_menu_nav{
+    padding-top: 90px;
+    position: fixed;
+    z-index: 20;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 12px 4px rgba(0, 0, 0, 0.5);
+    left: -100%;
+    overflow-y: auto;
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+.burger_menu_active .burger_menu_nav{
+    left: 0;
+}
+
+.burger_menu_link{
+    padding: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 41px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.burger_menu_link:hover{
+    filter: brightness(0.7);
+}
+
+.burger_overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(38, 36, 36, 0.2);
+}
+
+.burger_menu_active .burger_overlay{
+    display: block;
+}
+
+.eye img{
+    height: 500px;
+    width: 500px;
+    position: relative;
+    top: -40px;
+}
